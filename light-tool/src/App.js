@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./logo2.svg";
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Slider from "./slider";
@@ -19,6 +19,8 @@ function App() {
     minHeight: "100vh",
   };
 
+  //Algorithm from : https://tannerhelland.com/2012/09/18/convert-temperature-rgb-algorithm-code.html
+  //Code pulled from: https://gist.github.com/EDais/1ba1be0fe04eca66bbd588a6c9cbd666
   getRGBFromTemperature = function (tmpKelvin) {
     // All calculations require tmpKelvin \ 100, so only do the conversion once
     tmpKelvin = clamp(tmpKelvin, 1000, 40000) / 100;
